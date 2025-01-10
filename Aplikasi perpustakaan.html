@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+    
+        *{
+            font-family: 'Nunito', sans-serif;
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+            outline: none; border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+
+        html{
+            font-size: 62.5%;
+        }
+
+        body{
+        background: url('background.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+        .header-1{
+            background-color: #4c4c4c; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 9%;
+        }
+
+        .logo{
+            color: white;
+            font-weight: bolder;
+            font-size: 3rem;
+        }
+
+        .logo i{
+            padding-right: .5rem;
+            color: white; 
+        }
+
+        .header-1 .search-box-container{
+            display: flex;
+            height: 5rem;
+        }
+
+        .header-1 .search-box-container #search-box{
+            height: 100%;
+            width: 100%;
+            padding: 1rem;
+            font-size: 2rem;
+            color: #323232; 
+            border: .1rem solid rgba(0, 0, 0, .3);
+            text-transform: none;
+        }
+
+        .header-1 .search-box-container label{
+            height: 100%;
+            width: 8rem;
+            font-size: 2.5rem;
+            line-height: 5rem;
+            color: white; 
+            background: black; 
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .header-1 .search-box-container label:hover{
+            background: #666; 
+        }
+
+        .header-2{
+            background: #666; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem 9%;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+            position: relative;
+        }
+
+        .header-2 .navbar a{
+            padding: .5rem 1.5rem;
+            font-size: 2rem;
+            border-radius: .5rem;
+            color: white;
+        }
+
+        .header-2 .navbar a:hover{
+            background: #7f7f7f; 
+            color: white;
+        }
+
+        .header-2 .icons a{
+            font-size: 2.5rem;
+            color: white; 
+            padding-left: 1rem;
+        }
+
+        .header-2 .icons a:hover{
+            color: #323232; 
+        }
+
+        .container{
+            max-width: 1200px;
+            height: auto;
+            margin: 20px auto;
+            padding: 50px;
+            background: transparent;
+            border: 2px solid rgba(225, 225, 225, .2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+        }
+
+        .container2{
+            max-width: 1200px;
+            height: auto;
+            margin: 20px auto;
+            padding: 50px;
+            background: transparent;
+            border: 2px solid rgba(225, 225, 225, .2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+        }
+
+        .container2 h2{
+            margin: 5px 0;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .container2 ol{
+            font-size: 1.6rem;
+            margin-left: 20px;
+        }
+
+        .container2 ol li{
+            margin-top: 8px;
+            color: #fff;
+        }
+
+        .container2 ol li a{
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .container2 ol li strong{
+            font-size: 1.8rem;
+            color: #fff;
+        }
+
+        .container3{
+            max-width: 1200px;
+            height: auto;
+            margin: 20px auto;
+            padding: 50px;
+            background: transparent;
+            border: 2px solid rgba(225, 225, 225, .2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+        }
+
+        .container3 p{
+            font-size: 1.6rem;
+            color: #fff;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .container3 p a{
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .container3 h2{
+            margin: 5px 0;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .container3 ol{
+            font-size: 1.6rem;
+            margin-left: 20px;
+        }
+
+        .container3 ol li{
+            margin-top: 8px;
+            color: #fff;
+        }
+
+        .container3 ol li a{
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .container3 ol li strong{
+            font-size: 1.8rem;
+            color: #fff;
+        }
+
+        .container h2{
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        .container h3{
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .container p{
+            font-size: 1.6rem;
+            margin-top: 10px;
+            color: #fff;
+        }
+
+        .container figcaption{
+            color: #fff;
+            font-size: small;
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+
+        .container img{
+            margin-top: 20px;
+            height: 200px;
+        }
+
+        footer{
+            background-color: #4c4c4c; 
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer h2{
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .column{
+            float: left;
+            width: 25%;
+            padding: 15px;
+        }
+
+        .column .logo{
+            font-size: 2rem;
+        }
+
+        .column .icons{
+            font-size: 3rem;
+        }
+
+        .column a{
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .column h3{
+            font-size: 2rem;
+        }
+
+        .row:after{
+            content: " ";
+            display: table;
+            clear: both;
+        }
+
+
+
+
+
+        @media(max-width:1200px){
+            .container{
+                max-width: 1000px;
+            }
+        }
+
+        @media(max-width:991px){
+            .header-1, .header-2{
+                padding: 2rem;
+            }
+
+            .container{
+                max-width: 900px;
+            }
+        }
+
+        @media(max-width:768px){
+
+            .header-1{
+                flex-flow: column;
+            }
+
+            .header-1 .search-box-container{
+                width: 50%;
+                height: 3rem;
+                margin-top: 1rem;
+            }
+
+            .header-1 .search-box-container label{
+                font-size: 1.5rem;
+                line-height: 3.2rem;
+            }
+
+            .logo{
+                font-size: 3rem;
+            }
+
+            .header-2 .navbar{
+                top: 100%; left: 0; right: 0;
+            }
+
+            .header-2 .navbar a{
+                font-size: 1.3rem;
+                text-align: center;
+                padding: 1rem;
+                margin: 2rem 0;
+            }
+
+            .header-2{
+                padding: 1rem 9%;
+                justify-content: center;
+            }
+
+            .header-2 .icons a{
+                font-size: 1.5rem;
+                padding-left: 1rem;
+            }
+
+            .container{
+                max-width: 600px;
+            }
+
+            .container h2{
+                font-size: 2.5rem;
+            }
+
+            .container h3{
+                font-size: 1.5rem;
+            }
+
+            .container p{
+                font-size: 1.5rem;
+                margin-top: 10px;
+            }
+
+            .container img{
+                    margin-top: 20px;
+                    height: 125px;
+            }            
+            
+            .container2{
+                max-width: 600px;
+            }
+
+            .container2 ol li{
+                font-size: 1.5rem;
+            }
+
+            .container2 h2{
+                font-size: 2.5rem;
+            }
+
+            .container3{
+                max-width: 600px;
+            }
+
+            .container3 ol li{
+                font-size: 1.5rem;
+            }
+
+            .container3 h2{
+                font-size: 2.5rem;
+            }
+
+            footer{
+            background-color: #4c4c4c; 
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer h2{
+            color: white;
+            font-size: .7rem;
+        }
+
+        .column{
+            float: left;
+            width: 25%;
+            padding: 15px;
+        }
+
+        .column .logo{
+            font-size: 1rem;
+        }
+
+        .column .icons{
+            font-size: 1rem;
+        }
+
+        .column a{
+            color: white;
+            font-size: .6rem;
+        }
+
+        .column h3{
+            font-size: 1.2rem;
+        }
+}
+
+        @media(max-width:450px){
+            html{
+                font-size: 50%;
+            }
+
+            .header-1{
+                flex-flow: column;
+            }
+
+            .header-1 .search-box-container{
+                width: 100%;
+                height: 3.5rem;
+                margin-top: 2rem;
+            }
+
+            .header-1 .search-box-container label{
+                font-size: 2rem;
+                line-height: 3.5rem;
+            }
+            
+            .logo{
+                font-size: 3rem;
+            }
+
+            .container{
+                max-width: 400px;
+            }
+
+            .container h2{
+                font-size: 2rem;
+            }
+
+            .container h3{
+                font-size: 1.3rem;
+            }
+
+            .container figcaption{
+            color: #666;
+            font-size: 1.3rem;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+            .container img{
+                margin-top: 20px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-1">
+            <a href="#" class="logo"><i class="fas fa-book">  Ray's World</i></a>
+
+            <form action="" class="search-box-container">
+                <input type="search" id="search-box" placeholder="search here...">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+        </div>
+
+        <div class="header-2">
+            <nav class="navbar">
+                <a href="Aplikasi perpustakaan.html">Beranda</a>
+                <a href="Koleksi.html">Koleksi</a>
+                <a href="Peminjaman.html">Peminjaman</a>
+                <a href="Profil.html">Profil</a>
+                <a href="Loogin.html">Login</a>
+            </nav>
+
+            <div class="icons">
+                <a href="Peminjaman.html" class="fas fa-shopping-cart"></a>
+                <a href="Profil.html" class="fas fa-heart"></a>
+                <a href="Loogin.html" class="fas fa-user-circle"></a></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <center>
+            <h2>Hai, selamat datang di Ray's World!</h2>
+            <h3>Teman membaca untukmu</h3>
+        </center>
+        
+        <center><img src="https://cdn.goconqr.com/uploads/media/image/12214836/desktop_5b260deb-1ae9-4564-854b-49d8ef87b6b7.png" alt="Buku"></center>
+        <center><figcaption>Ayo baca buku!</figcaption></center>
+
+        <p>Dalam labirin kehidupan yang penuh tantangan, Ray's World hadir sebagai kompas yang setia. Di sini, Anda akan menemukan harta karun berupa ribuan buku inspiratif yang akan memandu Anda dalam perjalanan menemukan versi terbaik diri sendiri. Dari teknik-teknik mindfulness yang menenangkan hingga strategi pengembangan karir yang efektif, kami menyajikan beragam bacaan yang akan mengasah pikiran, menyehatkan jiwa, dan membuka potensi tak terbatas yang tersembunyi dalam diri Anda.</p>
+        <p>Ray's World lebih dari sekadar perpustakaan digital. Kami adalah ruang bagi Anda untuk tumbuh, berkembang, dan menjadi versi terbaik dari diri sendiri. Dengan kurasi buku yang cermat dan fitur-fitur interaktif yang menarik, kami menawarkan pengalaman membaca yang unik dan mendalam. Temukan inspirasi, motivasi, dan panduan yang Anda butuhkan untuk mencapai tujuan hidup Anda.</p>
+    </div>
+
+    <div class="container2">
+        <h2>Panduan menggunakan Form login</h2>
+        <ol>
+            <li><strong>Buka Halaman Login:</strong> Kunjungi halaman web tempat formulir login ini berada. Atau klik <a href="Loogin.html">disini</a></li>
+            <li><strong>Username:</strong> Masukkan nama pengguna</li>
+            <li><strong>Password:</strong> Masukkan kata sandi yang sesuai dengan nama pengguna Anda. Pastikan Anda mengetik dengan benar, karena kata sandi bersifat sensitif terhadap huruf besar dan kecil.</li>
+            <li><strong>Centang "Remember Me" (Opsional):</strong> Jika Anda ingin browser mengingat informasi login Anda, centang kotak kecil di samping tulisan "Remember me". Dengan begitu, Anda tidak perlu lagi memasukkan username dan password setiap kali mengunjungi halaman login. Namun, hati-hati saat menggunakan fitur ini di komputer publik.</li>
+            <li><strong>Klik "Login":</strong> Setelah mengisi semua informasi, klik tombol "Login" untuk mengirimkan data Anda ke sistem.</li>
+            <li><strong>Akses Sistem:</strong> Jika informasi login Anda benar, Anda akan diarahkan ke halaman utama sistem manajemen perpustakaan. Di sini, Anda dapat mulai menggunakan berbagai fitur yang tersedia.</li>
+        </ol>
+    </div>
+
+    <div class="container3">
+        <h2>Panduan Menggunakan Formulir Peminjaman Buku</h2>
+        <p>Perpustakaan Ray's World menyediakan layanan peminjaman buku bagi para anggotanya. Untuk melakukan peminjaman buku, Anda dapat mengisi <a href="Peminjaman.html">formulir ini</a>. Berikut adalah panduan untuk menggunakan formulir peminjaman:</p>
+        <ol>
+            <li><strong>Akses halaman peminjaman: </strong>Buka halaman peminjaman perpustakaan Ray's World. Anda bisa menggunakan <a href="Peminjaman.html">link berikut.</a></li>
+            <li><strong>Nama Peminjam:</strong> Masukkan nama lengkap Anda pada kolom yang tersedia. Pastikan nama yang Anda masukkan sesuai dengan identitas Anda sebagai anggota perpustakaan.</li>
+            <li><strong>Judul Buku:</strong> Masukkan judul buku yang ingin Anda pinjam pada kolom yang tersedia. Pastikan Anda mengetahui judul buku dengan benar untuk memudahkan pencarian buku oleh petugas perpustakaan.</li>
+            <li><strong>Tanggal Pinjam:</strong> Pilih tanggal peminjaman buku pada kolom yang tersedia. Anda bisa menggunakan kalender yang muncul ketika Anda mengklik kolom tanggal pinjam.</li>
+            <li><strong>Tanggal Kembali:</strong> Pilih tanggal pengembalian buku pada kolom yang tersedia. Pastikan tanggal yang Anda pilih sesuai dengan jangka waktu peminjaman yang ditetapkan oleh perpustakaan.</li>
+            <li><strong>Periksa kembali informasi yang Anda masukkan</strong>Setelah mengisi semua kolom formulir peminjaman, pastikan kembali bahwa informasi yang Anda masukkan sudah benar. Periksa kembali nama Anda, judul buku, tanggal pinjam, dan tanggal kembali.</li>
+            <li><strong>Ajukan peminjaman: </strong>Setelah yakin semua informasi sudah benar, klik tombol "Pinjam Buku" untuk mengajukan peminjaman buku.</li>
+            <li><strong>Simpan bukti peminjaman: </strong>Setelah Anda berhasil melakukan peminjaman, Anda akan menerima bukti peminjaman yang berisi informasi mengenai buku yang dipinjam, tanggal peminjaman, dan tanggal pengembalian. Simpanlah bukti peminjaman ini dengan baik sebagai catatan peminjaman Anda.</li>
+        </ol>
+    </div>
+
+    <footer class="footer">
+        <div class="column">
+            <a href="#" class="logo"><i class="fas fa-book"> Ray's World</i></a>
+            <div class="share">
+                <a href="#" class="btn fab fa-facebook-f"></a>
+                <a href="#" class="btn fab fa-twitter"></a>
+                <a href="#" class="btn fab fa-instagram"></a>
+                <a href="#" class="btn fab fa-linkdin"></a>
+            </div>
+        </div>
+
+        <div class="column">
+            <h3>Alamat kami</h3>
+            <div class="links">
+                <a href="#">Indonesia </a>
+                <a href="#">| USA </a>
+                <a href="#">| Japan</a>
+            </div>
+        </div>
+
+        <div class="column">
+            <h3>Quick access</h3>
+            <div class="links">
+                <a href="Aplikasi perpustakaan.html">Beranda </a>
+                <a href="Koleksi.html">| koleksi </a>
+                <a href="Peminjaman.html">| Peminjaman </a>
+                <a href="Profil.html">| Profil</a>
+            </div>
+        </div>
+
+        <div class="column">
+            <h3>Download Apps</h3>
+            <div class="links">
+                <a href="#">Google play </a>
+                <a href="#">| App store</a>
+            </div>
+        </div>
+    </footer>
+
+    <footer class="footer2">
+        <div class="footer2">
+            <h2>&copy; Cahaya Billbina Millah - 241011700502</h2>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksi</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+    
+    *{
+        font-family: 'Nunito', sans-serif;
+        margin: 0; padding: 0;
+        box-sizing: border-box;
+        outline: none; border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+
+    html{
+        font-size: 62.5%;
+    }
+
+    body{
+        background: url('background.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+        .header-1{
+            background-color: #4c4c4c; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 9%;
+        }
+
+        .logo{
+            color: white;
+            font-weight: bolder;
+            font-size: 3rem;
+        }
+
+        .logo i{
+            padding-right: .5rem;
+            color: white; 
+        }
+
+        .header-1 .search-box-container{
+            display: flex;
+            height: 5rem;
+        }
+
+        .header-1 .search-box-container #search-box{
+            height: 100%;
+            width: 100%;
+            padding: 1rem;
+            font-size: 2rem;
+            color: #323232; 
+            border: .1rem solid rgba(0, 0, 0, .3);
+            text-transform: none;
+        }
+
+        .header-1 .search-box-container label{
+            height: 100%;
+            width: 8rem;
+            font-size: 2.5rem;
+            line-height: 5rem;
+            color: white; 
+            background: black; 
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .header-1 .search-box-container label:hover{
+            background: #666; 
+        }
+
+        .header-2{
+            background: #666; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem 9%;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+            position: relative;
+        }
+
+        .header-2 .navbar a{
+            padding: .5rem 1.5rem;
+            font-size: 2rem;
+            border-radius: .5rem;
+            color: white;
+        }
+
+        .header-2 .navbar a:hover{
+            background: #7f7f7f; 
+            color: white;
+        }
+
+        .header-2 .icons a{
+            font-size: 2.5rem;
+            color: white; 
+            padding-left: 1rem;
+        }
+
+        .header-2 .icons a:hover{
+            color: #323232; 
+        }
+
+
+
+
+
+
+
+
+        .container{
+            max-width: 1200px;
+            height: auto;
+            margin: 20px auto;
+            padding: 50px;
+            border-radius: 5px;
+            background: transparent;
+            border: 2px solid rgba(225, 225, 225, .2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+        }
+
+        .perpustakaan{
+            text-align: center;
+        }
+
+        .perpustakaan h2{
+            color: #fff;
+            font-size: 3rem;
+            margin: 5px;
+        }
+
+        .perpustakaan p{
+            color: #fff;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .poster{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .kartu{
+            width: 280px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border: 1px solid #999999; 
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #666;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+        }
+
+        .kartu:hover{
+            transform: scale(1.1);
+            border: 1px solid #fff; 
+        }
+
+        .foto-kartu{
+            width: 250px;
+            margin: 0 auto 5px;
+        }
+
+        .foto-kartu img{
+            height: 250px;
+        }
+
+        .detail-kartu{
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .judul-buku{
+            font-size: 1.7rem;
+            color: #fff;
+            margin: 5px;
+        }
+
+        .detail-buku{
+            color: #fff;
+            font-size: 1.4rem;
+        }
+
+        .button{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        .button2 a{
+            flex: 1;
+            padding: 10px 20px;
+            margin: 0 5px auto;
+            background-color: #323232;
+            color: #fff; 
+            border: 1px solid #323232; 
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button2 a:hover{
+            transform: scale(0.99);
+            background-color: #fff; 
+            color: #323232; 
+        }
+
+        footer{
+            background-color: #4c4c4c; 
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer{
+            background-color: #4c4c4c; 
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer h2{
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .column{
+            float: left;
+            width: 25%;
+            padding: 15px;
+        }
+
+        .column .logo{
+            font-size: 2rem;
+        }
+
+        .column .icons{
+            font-size: 3rem;
+        }
+
+        .column a{
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .column h3{
+            font-size: 2rem;
+        }
+
+        .row:after{
+            content: " ";
+            display: table;
+            clear: both;
+        }
+
+
+
+
+
+@media(max-width:1200px){
+.container{
+    max-width: 1000px;
+}
+}
+
+@media(max-width:991px){
+.header-1, .header-2{
+    padding: 2rem;
+}
+
+.container{
+    max-width: 900px;
+}
+}
+
+@media(max-width:768px){
+
+.header-1{
+    flex-flow: column;
+}
+
+.header-1 .search-box-container{
+    width: 50%;
+    height: 3rem;
+    margin-top: 1rem;
+}
+
+.header-1 .search-box-container label{
+    font-size: 1.5rem;
+    line-height: 3.2rem;
+}
+
+.logo{
+    font-size: 3rem;
+}
+
+.header-2 .navbar{
+    top: 100%; left: 0; right: 0;
+}
+
+.header-2 .navbar a{
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+.header-2{
+    padding: 1rem 9%;
+    justify-content: center;
+}
+
+.header-2 .icons a{
+    font-size: 1.5rem;
+    padding-left: 1rem;
+}
+
+.container{
+    max-width: 600px;
+}
+
+.poster{
+    flex-flow: column;            
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .perpustakaan h2{
+            font-size: 2rem;
+            margin: 5px;
+        }
+
+        .perpustakaan p{
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        footer{
+            background-color: #4c4c4c; 
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer h2{
+            color: white;
+            font-size: .7rem;
+        }
+
+        .column{
+            float: left;
+            width: 25%;
+            padding: 15px;
+        }
+
+        .column .logo{
+            font-size: 1rem;
+        }
+
+        .column .icons{
+            font-size: 1rem;
+        }
+
+        .column a{
+            color: white;
+            font-size: 1rem;
+        }
+
+        .column h3{
+            font-size: 1.2rem;
+        }
+
+        .kartu{
+            width: 350px;
+            height: 450px;
+            margin-bottom: 30px;
+        }
+
+        .foto-kartu{
+            width: 250px;
+            height: 270px;
+            margin-top: 15px;
+        }
+}
+
+@media(max-width:450px){
+html{
+    font-size: 50%;
+}
+
+.header-1{
+    flex-flow: column;
+}
+
+.header-1 .search-box-container{
+    width: 100%;
+    height: 3.5rem;
+    margin-top: 2rem;
+}
+
+.header-1 .search-box-container label{
+    font-size: 2rem;
+    line-height: 3.5rem;
+}
+
+.logo{
+    font-size: 3rem;
+}
+
+.container{
+    max-width: 400px;
+}
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-1">
+            <a href="#" class="logo"><i class="fas fa-book">  Ray's World</i></a>
+
+            <form action="" class="search-box-container">
+                <input type="search" id="search-box" placeholder="search here...">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+        </div>
+
+        <div class="header-2">
+            <nav class="navbar">
+                <a href="Aplikasi perpustakaan.html">Beranda</a>
+                <a href="Koleksi.html">Koleksi</a>
+                <a href="Peminjaman.html">Peminjaman</a>
+                <a href="Profil.html">Profil</a>
+                <a href="Loogin.html">Login</a>
+            </nav>
+
+            <div class="icons">
+                <a href="Peminjaman.html" class="fas fa-shopping-cart"></a>
+                <a href="Profil.html" class="fas fa-heart"></a>
+                <a href="Loogin.html" class="fas fa-user-circle"></a></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="perpustakaan">
+            <h2>Baca buku apa hari ini?</h2>
+            <p>Kami menyediakan berbagai koleksi buku yang terbaik untuk anda</p>
+        </div>
+
+        <div class="poster">
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="the subtle.png" alt="The Subtle Art of Not Giving a F*ck">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">The Subtle Art of Not Giving a F*ck</h3>
+                    <p class="detail-buku">Penulis : Mark Manson</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://markmanson.net/books/subtle-art">Detail</a></button>
+                </div>
+            </div>
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="everything is.png" alt="Everything is F*cked">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Everything is F*cked</h3>
+                    <p class="detail-buku">Penulis : Mark Manson</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://markmanson.net/books/everything-is-fucked">Detail</a></button>
+                </div>
+            </div>
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="love is.png" alt="Love Is Not Enough (Audiobook)">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Love Is Not Enough (Audiobook)</h3>
+                    <p class="detail-buku">Penulis : Mark Manson</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://markmanson.net/books/love-is-not-enough-audiobook">Detail</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster">
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="will.png" alt="Will">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Will</h3>
+                    <p class="detail-buku">
+                        Penulis : Mark Manson</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://markmanson.net/books/will">Detail</a></button>
+                </div>
+            </div>
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="the subtle art.png" alt="The Subtle Art of Not Giving a F*ck Journal">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">The Subtle Art of Not Giving a F*ck Journal</h3>
+                    <p class="detail-buku">Penulis : Mark Manson</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://markmanson.net/books/subtle-art-journal">Detail</a></button>
+                </div>
+            </div>
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="models.png" alt="Models: Attract Women Through Honesty">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Models: Attract Women Through Honesty</h3>
+                    <p class="detail-buku">Penulis : Mark Manson</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://markmanson.net/books/models">Detail</a></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="poster">
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="6.jpg" alt="Jika kita tak pernah jatuh cinta">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Jika kita tak pernah jatuh cinta</h3>
+                    <p class="detail-buku">
+                        Penulis : Alvi Syahrin</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.alvisyahrin.com/buku/jika-kita-tak-pernah-jatuh-cinta">Detail</a></button>
+                </div>
+            </div>
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="5.jpg" alt="Jika kita tak pernah jadi apa-apa">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Jika kita tak pernah jadi apa-apa</h3>
+                    <p class="detail-buku">Penulis : Alvi Syahrin</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.alvisyahrin.com/buku/jika-kita-tak-pernah-jadi-apa-apa">Detail</a></button>
+                </div>
+            </div>
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="4.jpg" alt="Jika kita tak pernah baik-baik saja">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Jika kita tak pernah baik-baik saja</h3>
+                    <p class="detail-buku">Penulis : Alvi Syahrin</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.alvisyahrin.com/buku/jika-kita-tak-pernah-baik-baik-saja">Detail</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster">
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="3.jpg" alt="Insecurity is my middle name">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Insecurity is my middle name</h3>
+                    <p class="detail-buku">
+                        Penulis : Alvi Syahrin</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.alvisyahrin.com/buku/insecurity-is-my-middle-name">Detail</a></button>
+                </div>
+            </div>
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="1.jpg" alt="Loneliness is my bestfriend">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Loneliness is my bestfriend</h3>
+                    <p class="detail-buku">Penulis : Alvi Syahrin</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.alvisyahrin.com/buku/loneliness-is-my-best-friend">Detail</a></button>
+                </div>
+            </div>
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="2.jpg" alt="Overthinking is my hobby, and I hate it">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Overthinking is my hobby, and I hate it</h3>
+                    <p class="detail-buku">Penulis : Alvi Syahrin</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.alvisyahrin.com/buku/overthinking-is-my-hobby-and-i-hate-it">Detail</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster">
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="filosofi.jpg" alt="Filosofi Teras ">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Filosofi Teras </h3>
+                    <p class="detail-buku">
+                    Penulis : Henry Manampiring</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/products/filosofi-teras-edisi-baru-filsafat-yunani-romawi-kuno-untuk-mental-tangguh-masa-kini?utm_source=bestseller&utm_medium=bestsellerbuku&utm_campaign=seo&utm_content=BestSellerRekomendasi">Detail</a></button>
+                </div>
+            </div>
+    
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="dibaca.jpg" alt="Dibaca">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Dibaca</h3>
+                    <p class="detail-buku">Penulis : aesteuticc</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/products/dibaca?utm_source=bestseller&utm_medium=bestsellerbuku&utm_campaign=seo&utm_content=BestSellerRekomendasi">Detail</a></button>
+                </div>
+            </div>
+    
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="ketika aku.jpg" alt="Ketika Aku Tak Tahu Apa Yang Aku Inginkan">
+                    </center>
+                </div>
+            
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Ketika Aku Tak Tahu Apa Yang Aku Inginkan</h3>
+                    <p class="detail-buku">Penulis : Jeon Seunghwan</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/products/ketika-aku-tak-tahu-apa-yang-aku-inginkan?utm_source=bestseller&utm_medium=bestsellerbuku&utm_campaign=seo&utm_content=BestSellerRekomendasi">Detail</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster">
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="almost.jpg" alt="Almost Adulting: Self-Help Approach to Deal With Quarter-Life Crisis">
+                    </center>
+                </div>
+            
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Almost Adulting: Self-Help Approach to Deal With Quarter-Life Crisis</h3>
+                    <p class="detail-buku">
+                    Penulis : NADHIRA AFIFA</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/products/almost-adulting-self-help-approach-to-deal-with-quarter-life-crisis?utm_source=bestseller&utm_medium=bestsellerbuku&utm_campaign=seo&utm_content=BestSellerRekomendasi">Detail</a></button>
+                </div>
+            </div>
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="overheard.jpg" alt="Overheard Jakarta">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Overheard Jakarta</h3>
+                    <p class="detail-buku">Penulis : OVERHEARDJKT</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/best-seller/rekomendasi-buku-motivasi-terbaru/">Detail</a></button>
+                </div>
+            </div>
+
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="yang.jpg" alt="Yang Belum Usai: Kenapa Manusia Punya Luka Batin ">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Yang Belum Usai: Kenapa Manusia Punya Luka Batin </h3>
+                    <p class="detail-buku">Penulis : Pijar Psikologi</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/products/yang-belum-usai-kenapa-manusia-punya-luka-batin?utm_source=bestseller&utm_medium=bestsellerbuku&utm_campaign=seo&utm_content=BestSellerRekomendasi">Detail</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster">
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="stop overthinking.jpg" alt="Stop Overthinking: Lebih Happy Jalani Hidup dengan Tidak Berpikir Berlebih">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Stop Overthinking: Lebih Happy Jalani Hidup dengan Tidak Berpikir Berlebih</h3>
+                    <p class="detail-buku">
+                    Penulis :  Nick Trenton</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/products/buku-stop-overthinking-lebih-happy-jalani-hidup-dengan-tidak-berpikir-berlebihan?utm_source=bestseller&utm_medium=bestsellerbuku&utm_campaign=seo&utm_content=BestSellerRekomendasi">Detail</a></button>
+                </div>
+            </div>
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="the art of.jpg" alt="The Art Of Thinking Clearly">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">The Art Of Thinking Clearly</h3>
+                    <p class="detail-buku">Penulis : Rolf Dobelli</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/products/99-sesat-pikir-1?utm_source=bestseller&utm_medium=bestsellerbuku&utm_campaign=seo&utm_content=BestSellerRekomendasi">Detail</a></button>
+                </div>
+            </div>
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="generation.jpg" alt="Generation Gap(less): Seni Menjalin Relasi Antargenerasi ">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Generation Gap(less): Seni Menjalin Relasi Antargenerasi </h3>
+                    <p class="detail-buku">Penulis : Erwin Parengkuan & Becky Tumewu</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/best-seller/rekomendasi-buku-motivasi-terbaru/">Detail</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster">
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="nanti.jpg" alt="Nanti Juga Sembuh Sendiri">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Nanti Juga Sembuh Sendiri</h3>
+                    <p class="detail-buku">
+                    Penulis : Helo Bagas</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/products/nanti-juga-sembuh-sendiri?utm_source=bestseller&utm_medium=bestsellerbuku&utm_campaign=seo&utm_content=BestSellerRekomendasi">Detail</a></button>
+                </div>
+            </div>
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="merawat luka.jpg" alt="Merawat Luka Batin">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Merawat Luka Batin</h3>
+                    <p class="detail-buku">Penulis : Dr Jiemi Ardian</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/products/merawat-luka-batin?utm_source=bestseller&utm_medium=bestsellerbuku&utm_campaign=seo&utm_content=BestSellerRekomendasi">Detail</a></button>
+                </div>
+            </div>
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="ego.jpg" alt="Ego Is The Enemy">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Ego Is The Enemy</h3>
+                    <p class="detail-buku">Penulis : Ryan Holiday</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/products/ego-is-the-enemy?utm_source=bestseller&utm_medium=bestsellerbuku&utm_campaign=seo&utm_content=BestSellerRekomendasi">Detail</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster">
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="range.jpg" alt="Range">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Range</h3>
+                    <p class="detail-buku">
+                        Penulis : David Epstein</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/best-seller/rekomendasi-buku-motivasi-terbaru/">Detail</a></button>
+                </div>
+            </div>
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="how to.jpeg" alt="How To Think Like Sherlock Holmes">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">How To Think Like Sherlock Holmes</h3>
+                    <p class="detail-buku">Penulis : Peter Hollins</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/products/how-to-think-like-sherlock-holmes?utm_source=bestseller&utm_medium=bestsellerbuku&utm_campaign=seo&utm_content=BestSellerRekomendasi">Detail</a></button>
+                </div>
+            </div>
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="grit.jpg" alt="Grit: Kekuatan Passion dan Kegigihan">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Grit: Kekuatan Passion dan Kegigihan</h3>
+                    <p class="detail-buku">Penulis : Angela Duckworth</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/products/grit-kekuatan-passion-dan-kegigihan-edisi-revisi?utm_source=bestseller&utm_medium=bestsellerbuku&utm_campaign=seo&utm_content=BestSellerRekomendasi">Detail</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="poster">
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="anatomic.jpg" alt="Atomic Habits: Perubahan Kecil yang Memberikan Hasil Luar Biasa">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Atomic Habits: Perubahan Kecil yang Memberikan Hasil Luar Biasa</h3>
+                    <p class="detail-buku">
+                    Penulis : James Clear</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/products/atomic-habits-perubahan-kecil-yang-memberikan-hasil-luar-bi?utm_source=bestseller&utm_medium=bestsellerbuku&utm_campaign=seo&utm_content=BestSellerRekomendasi">Detail</a></button>
+                </div>
+            </div>
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="berani.jpg" alt="Berani Tidak Disukai">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Berani Tidak Disukai</h3>
+                    <p class="detail-buku">Penulis : Ichiro Kishimi Dan Fumitake Koga</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/products/berani-tidak-disukai?utm_source=bestseller&utm_medium=bestsellerbuku&utm_campaign=seo&utm_content=BestSellerRekomendasi">Detail</a></button>
+                </div>
+            </div>
+
+            <div class="kartu">
+                <div class="foto-kartu">
+                    <center>
+                    <img src="masih.jpg" alt="Masih Belajar">
+                    </center>
+                </div>
+
+                <div class="detail-kartu">
+                    <h3 class="judul-buku">Masih Belajar</h3>
+                    <p class="detail-buku">Penulis : Iman Usman</p>
+                </div>
+
+                <div class="button">
+                    <button class="button2"><a href="Peminjaman.html">Pinjam</a></button>
+                    <button class="button2"><a href="https://www.gramedia.com/best-seller/rekomendasi-buku-motivasi-terbaru/">Detail</a></button>
+                </div>
+            </div>
+        </div>
+
+    <footer class="footer">
+        <div class="column">
+            <a href="#" class="logo"><i class="fas fa-book"> Ray's World</i></a>
+            <div class="share">
+                <a href="#" class="btn fab fa-facebook-f"></a>
+                <a href="#" class="btn fab fa-twitter"></a>
+                <a href="#" class="btn fab fa-instagram"></a>
+                <a href="#" class="btn fab fa-linkdin"></a>
+            </div>
+        </div>
+
+        <div class="column">
+            <h3>Alamat kami</h3>
+            <div class="links">
+                <a href="#">Indonesia </a>
+                <a href="#">| USA </a>
+                <a href="#">| Japan</a>
+            </div>
+        </div>
+
+        <div class="column">
+            <h3>Quick access</h3>
+            <div class="links">
+                <a href="Aplikasi perpustakaan.html">Beranda </a>
+                <a href="Koleksi.html">| koleksi </a>
+                <a href="Peminjaman.html">| Peminjaman </a>
+                <a href="#">| Profil</a>
+            </div>
+        </div>
+
+        <div class="column">
+            <h3>Download Apps</h3>
+            <div class="links">
+                <a href="#">Google play </a>
+                <a href="#">| App store</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <footer class="footer2">
+        <div class="footer2">
+            <h2>&copy; Cahaya Billbina Millah - 241011700502</h2>
+        </div>
+    </footer>
+</body>
+</html>
